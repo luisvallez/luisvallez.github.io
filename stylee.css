@@ -1,0 +1,276 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Libre Baskerville", sans-serif;
+  user-select: none;
+  background-color: var(--verde);
+}
+
+script {
+  visibility: hidden;
+}
+
+:root {
+  --amarillo: #f1a352;
+  --negro: black;
+  --descripcion: #000000cb;
+  --fondo: #000000ad;
+  --verde: #3b6a64;
+}
+
+.FotoPerra {
+  animation: pedo 0.3s;
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--fondo);
+}
+
+@keyframes pedo {
+  from {
+    opacity: 0;
+    scale: 1.2;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.descripcion {
+  position: fixed;
+  border-radius: 50px;
+  display: flex;
+  height: 70%;
+  background-color: var(--descripcion);
+  top: 20%;
+  left: 50%;
+  margin-top: -7%; /* la mitad de la altura del div pero negativo*/
+  margin-left: -35%; /* la mitad del ancho del div pero negativo*/
+  width: 70%;
+  height: 80%;
+  z-index: 1;
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+}
+
+.pedo {
+  display: none;
+}
+
+p {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  word-wrap: break-word;
+  max-width: 500px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.cerrar {
+  position: fixed;
+  top: 60px;
+  left: 100px;
+  margin: 0px 10px;
+  padding: 0% 1%;
+
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--fondo);
+  border-radius: 40px;
+}
+
+.pattern7 {
+  background-image: repeating-linear-gradient(
+    -214deg,
+    #315c57,
+    #3a6762 1px,
+    transparent 0px,
+    transparent 13px
+  );
+  background-size: 9px;
+}
+
+/* Cambia la apariencia de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Cambia el color de fondo de la barra */
+::-webkit-scrollbar-track,
+::-ms-track {
+  background-color: transparent;
+}
+
+/* Cambia el color de la barra en sí */
+::-webkit-scrollbar-thumb {
+  background-color: #f1a352;
+  border-radius: 5px;
+  /* Redondea la barra */
+}
+
+/* Añade un efecto de sombra en la barra */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cc883f;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+span {
+  color: #f1a352;
+}
+
+#expertise {
+  padding-top: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  text-align: center;
+  color: #f1a352;
+}
+
+/* Aqui se realizan las animaciones del Iframe */
+iframe {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+iframe {
+  height: 90px;
+  transition: height 0.3s ease-out;
+}
+
+iframe:hover {
+  height: 200px;
+}
+
+.container {
+  padding: 0px;
+}
+
+.main {
+  text-align: center;
+  justify-content: center;
+}
+
+/*Sizing*/
+.spacer {
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+/*Expertise Section*/
+.cards {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+.tabla {
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0px 50px;
+}
+
+.contenedor {
+  visibility: hidden;
+  position: relative;
+  height: 250px !important;
+  width: 250px !important;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  text-align: left;
+  justify-content: center;
+}
+
+.contenedor:hover .imagen {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0%, 0%) scale(1);
+  animation: papure 0.2s;
+  justify-content: center;
+  border: 9px solid #ffffff;
+}
+
+@keyframes papure {
+  from {
+    border: 9px solid #f1a352;
+  }
+
+  to {
+    border: 9px solid #ffffff;
+  }
+}
+
+.contenedor:not(:hover) .imagen {
+  visibility: visible;
+  border: 9px solid #f1a352;
+  animation: papuree 0.2s;
+}
+
+@keyframes papuree {
+  from {
+    border: 9px solid #ffffff;
+  }
+
+  to {
+    border: 9px solid #f1a352;
+  }
+}
+
+.imagen {
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 30px;
+  border: 9px solid #f1a352;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+/*Jumbotron Section*/
+.jumbotron {
+  padding-top: 25px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+.jumbotron h2 {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
