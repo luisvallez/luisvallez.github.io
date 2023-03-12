@@ -53,3 +53,15 @@ document.addEventListener("keydown", function (event) {
     document.querySelector(".FotoPerra").style.display = "none";
   }
 });
+
+const audioPlayer = document.getElementById("audio-player");
+const playBtn = document.querySelector("label.button");
+
+playBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }
+});
